@@ -4,6 +4,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import math
 
+# this class takes in cell conentration of the solution entering the microfluidics device 
+# and the desired diameter of the microgel produced by the microfluidics device, 
+# and outputs the stastical value of important lambda, whic is, in this case, avg cells per droplet
 class Lambda:
     def __init__(self, cellConcentration, diameter):
         self.cellConcentration = cellConcentration
@@ -35,7 +38,9 @@ class Lambda:
 
 
 
-
+# list lambda is able to plot probability distributions that correspond with various lambdas, which 
+# could be determined by the characteristics of the experiment, or necessary characteristics could be determined 
+# by a desired lambda using solveLambda definition
 class listLambda:
     def __init__(self):
         self.listRawLambda = []
@@ -118,14 +123,19 @@ class listLambda:
 
 
 cells=listLambda()
+# add in lambdas that correspond with experimental setup
 cells.addLambda(Lambda(300,500))
 cells.addLambda(Lambda(500,400))
 cells.addLambda(Lambda(480,380))
 cells.addLambda(Lambda(200,700))
 cells.addLambda(Lambda(1000,400))
+# plots between 0 to 70 avg cells/droplet
 cells.plot(0,70)
 
 cellsSmall = listLambda()
+# add in desired lambda values (1, 2, 3, 4 avg cells/droplet) with the droplet diameter
+# desired in this experiment, the code will then output the cell concentrations needed to achieve this, 
+# and ask if you want to add this to the list of lambdas that will each create its respective poisson curves
 cellsSmall.solveLambda(1,400)
 cellsSmall.solveLambda(2,400)
 cellsSmall.solveLambda(3,400)
