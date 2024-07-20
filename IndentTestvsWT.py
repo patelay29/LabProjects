@@ -3,19 +3,22 @@ from matplotlib.ticker import MultipleLocator
 import numpy as np
 import math
 
+# data used in plot that corresponds to LAP cured microgel
 x = [5, 7, 9]
 y = [0.56, 11.74, 30.13]
 errors = [0.08, 1.08, 1.5]
 
+# data not used in the plot, but still corresponds to LAP cured microgel 
 dataotherx = [7,9,10.2]
 dataothery = [12.7,25.9,56.96]
 dataothererror = [1.44,3.16,2.28]
 
-
+# outlier data that corresponds to LAP cured microgel
 outx = [10.2]
 outy = [21.38]
 outerror = [1.10]
 
+# data that corresponds to APS/TEMED cured microgel, uncomment as necessary
 #conx = [3.75, 7.5, 10,12.5,17.5,3, 5]
 #cony = [3.6114,42.5124,85.4712,132.9382,256.6849,1.45, 11.9]
 #conerror = [0.4562,1.2123,3.705,15.7362,19.5461,0.05, 0.5]
@@ -96,7 +99,7 @@ plt.title('Hertz Model Data Analysis')
 plt.legend()
 
 
-
+# code that prompts questions 
 def LAPequation(x):
     return a*x**2+b*x+c
 def APSequation(conx):
