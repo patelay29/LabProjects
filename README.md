@@ -6,7 +6,7 @@ droplet sizes.
 IndentTestsWT.py contains the code to translate elastic  
 modulus properties between APS/TEMED cured hydrogels and LAP cured hydrogels. 
 
-cell_in_droplet_Poisson_distributation.py is the code that use stastics, taking 
+cell_in_droplet_Poisson_distributation.py is the code that uses stastics, taking 
 cell concentration and droplet diameter as variables, to determine the 
 probability distribution of the number cells encapsulated in the droplet. 
 
